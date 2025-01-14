@@ -13,7 +13,7 @@ export let router = createBrowserRouter([
         children: [
             {
                 path: "",
-                element: <App />,
+                element: <Home />,
             },
             {
                 path: "products",

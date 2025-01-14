@@ -1,0 +1,64 @@
+// SASS Variables
+:root {
+    --ff-primary: "Montserrat", serif;
+
+    --fw-light: 400;
+    --fw-primary: 500;
+    --fw-bold: 700;
+
+    --color-primary: #ff6060;
+    // --color-accent:#FF6060;
+    --color-bg-tranparent: rgba(0, 0, 0, 0.7);
+}
+
+// CSS Reset
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-optical-sizing: auto;
+    font-weight: var(--fw-primary);
+    font-style: normal;
+}
+
+// common propreties
+.flex {
+    display: flex;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-col {
+    flex-direction: column;
+}
+.justify-center {
+    justify-content: center;
+}
+.justifiy-between {
+    justify-content: space-between;
+}
+.items-center {
+    align-items: center;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    // &-logo {
+    // }
+    &-nav {
+        gap: 2em;
+    }
+}
