@@ -6,7 +6,7 @@ function Header() {
         <header className="header flex justify-between items-center ">
             <img
                 className="header-logo"
-                src="http://localhost:5173/src/assets/images/Logo.svg"
+                src="./src/assets/images/Logo.svg"
                 alt="Logo de Kasa"
             ></img>
             <nav className="header-nav flex">
