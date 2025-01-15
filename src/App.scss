@@ -2,13 +2,24 @@
 :root {
     --ff-primary: "Montserrat", serif;
 
+    --fs-light: 0.875em; //14px
+    --fs-primary: 1.125em; //18px
+    --fs-title: 1.5em; //24px
+    --fs-big: 3em; // 48px
+
     --fw-light: 400;
     --fw-primary: 500;
     --fw-bold: 700;
 
     --color-primary: #ff6060;
-    // --color-accent:#FF6060;
+    --color-dark: #000;
+    --color-light: #fff;
+    // --color-accent:;
     --color-bg-tranparent: rgba(0, 0, 0, 0.7);
+
+    --wrapper-padding: 50px 100px;
+    --wrapper-xs-padding: 20px;
+    --wrapper-width: 1440px;
 }
 
 // CSS Reset
@@ -26,12 +37,15 @@ svg {
     display: block;
     max-width: 100%;
 }
-
-body {
-    font-family: var(--ff-primary);
-    font-optical-sizing: auto;
-    font-weight: var(--fw-primary);
-    font-style: normal;
+a {
+    color: inherit;
+    text-decoration: inherit;
+    &:visited {
+        color: inherit;
+    }
+    &:hover {
+        color: var(--color-primary);
+    }
 }
 
 // common propreties
@@ -47,18 +61,48 @@ body {
 .justify-center {
     justify-content: center;
 }
-.justifiy-between {
+.justify-between {
     justify-content: space-between;
 }
 .items-center {
     align-items: center;
 }
+
+//General styles
+body {
+    font-family: var(--ff-primary);
+    font-optical-sizing: auto;
+    font-weight: var(--fw-primary);
+    font-style: normal;
+}
+
+#root {
+    max-width: var(--wrapper-width);
+    padding: var(--wrapper-padding);
+    @media (max-width: 769px) {
+        padding: var(--wrapper-xs-padding);
+    }
+}
+
+//Header styles
 .header {
-    display: flex;
-    justify-content: space-between;
-    // &-logo {
-    // }
+    margin-bottom: 50px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 27px;
+    }
+    &-logo {
+        @media (max-width: 768px) {
+            max-width: 145px;
+        }
+    }
     &-nav {
         gap: 2em;
+        @media (max-width: 768px) {
+            gap: 26px;
+        }
+    }
+    .active {
+        border-bottom: 1px solid black;
     }
 }

@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 
 function Header() {
     return (
-        <header className="header">
+        <header className="header flex justify-between items-center ">
             <img
                 className="header-logo"
                 src="http://localhost:5173/src/assets/images/Logo.svg"
@@ -11,7 +11,6 @@ function Header() {
             ></img>
             <nav className="header-nav flex">
                 <NavLink to={"/"}>Accueil</NavLink>
-                <br />
                 <NavLink to={"/about"}>À propos</NavLink>
             </nav>
         </header>
