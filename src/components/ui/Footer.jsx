@@ -2,13 +2,13 @@ import React from "react";
 
 function Footer() {
     return (
-        <footer>
+        <footer className="full-bleed footer">
             <img
-                className="footer-logo"
-                src="./src/assets/images/Logo.svg"
+                className="m-center footer-logo"
+                src="./src/assets/images/White_logo.svg"
                 alt="Logo de Kasa"
-                color="white"
             ></img>
+            <p>© 2020 Kasa. All rights reserved</p>
         </footer>
     );
 }

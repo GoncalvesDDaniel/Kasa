@@ -12,11 +12,16 @@
     --fw-bold: 700;
 
     --color-primary: #ff6060;
-    --color-dark: #000;
     --color-light: #fff;
+    --color-dark: #000;
+    --color-dark-light: #f6f6f6;
     // --color-accent:;
     --color-bg-tranparent: rgba(0, 0, 0, 0.7);
 
+    --border-radius-default: 25px;
+    --border-radius-cards: 10px;
+
+    --margin-bottom: 50px;
     --wrapper-padding: 50px 100px;
     --wrapper-xs-padding: 20px;
     --wrapper-width: 1440px;
@@ -52,6 +57,9 @@ a {
 .flex {
     display: flex;
 }
+.grid {
+    display: grid;
+}
 .flex-row {
     flex-direction: row;
 }
@@ -66,6 +74,15 @@ a {
 }
 .items-center {
     align-items: center;
+}
+.items-end {
+    align-items: end;
+}
+.absolute {
+    position: absolute;
+}
+.m-center {
+    margin: 0 auto;
 }
 
 //General styles
@@ -84,9 +101,8 @@ body {
     }
 }
 
-//Header styles
 .header {
-    margin-bottom: 50px;
+    margin-bottom: var(--margin-bottom);
 
     @media (max-width: 768px) {
         margin-bottom: 27px;
@@ -106,8 +122,62 @@ body {
         border-bottom: 1px solid black;
     }
 }
+.banner {
+    border-radius: var(--border-radius-default);
+    margin-bottom: var(--margin-bottom);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
 
-//Footer
-.footer-logo {
-    // width: 100%;
+    &-title {
+        color: var(--color-light);
+        font-size: var(--fs-big);
+        font-weight: var(--fw-bold);
+
+        padding: 77px;
+    }
+}
+
+.cards-container {
+    padding: 50px;
+    background-color: var(--color-dark-light);
+    border-radius: var(--border-radius-default);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 60px;
+    margin-bottom: var(--margin-bottom);
+}
+
+.cards-item {
+    border-radius: var(--border-radius-cards);
+    background-color: #ff6060;
+    // width: 200px;
+    // height: 300px;
+    aspect-ratio: 1 / 1;
+    color: var(--color-light);
+    &_title {
+        padding: 20px;
+        font-size: var(--fs-primary);
+    }
+}
+
+.footer {
+    background-color: black;
+    color: var(--color-light);
+    padding-top: 66px;
+    padding-bottom: 29px;
+    &-logo {
+        padding-bottom: 29px;
+        @media (max-width: 768px) {
+            padding-bottom: 0px;
+        }
+    }
+}
+
+//Trick to make a div full width
+.full-bleed {
+    // set a bg full width
+    box-shadow: 0 0 0 100vmax #000;
+    // trim it x-axes:0 , y-axes:-100vmax (extend)
+    clip-path: inset(0 -100vmax);
 }
