@@ -5,7 +5,7 @@ import "./App.scss";
 import json from "./api/db.json";
 
 function App() {
-    // const data = json;
+    const data = json;
     // console.log(data);
     return (
         <>
