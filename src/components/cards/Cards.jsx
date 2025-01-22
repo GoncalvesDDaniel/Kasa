@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 function Cards(props) {
+    let navigate = useNavigate();
     return (
         <>
             <div className="cards-container grid">
@@ -8,7 +10,9 @@ function Cards(props) {
                     <article
                         className="cards-item flex items-end"
                         key={item.id}
+                        onClick={() => navigate(`/products/${item.id}`)}
                     >
+                        <img src={item.cover} alt="" />
                         <h2
                             className="cards-item_title "
                             key={`${item.id}-title`}
@@ -23,9 +27,3 @@ function Cards(props) {
 }
 
 export default Cards;
-
-// <div className="cards-container grid">
-//     <article className="cards-item flex items-end">
-//         <h2 className="cards-item_title ">Titre de la location</h2>
-//     </article>
-// </div>
