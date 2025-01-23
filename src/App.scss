@@ -145,13 +145,13 @@ body {
     border-radius: var(--border-radius-default);
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 50px 60px;
+    margin-bottom: var(--margin-bottom);
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
     }
     // @media (max-width: 1024px) {
     //     gap: 20px;
     // }
-    margin-bottom: var(--margin-bottom);
 }
 
 .cards-item {

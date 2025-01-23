@@ -6,7 +6,7 @@ import json from "./api/db.json";
 
 function App() {
     const data = json;
-    // console.log(data);
+    // data.map((datas) => console.log(datas));
     return (
         <>
             <Layout />
