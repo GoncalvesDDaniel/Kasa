@@ -15,7 +15,7 @@ function Cards(props) {
                         key={item.id}
                         onClick={() =>
                             navigate(`/products/${item.id}`, {
-                                state: { item },
+                                state: item,
                             })
                         }
                     >
