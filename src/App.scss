@@ -158,11 +158,13 @@ body {
 }
 
 .cards-item {
-    border-radius: var(--border-radius-cards);
     // background-color: #ff6060;
     aspect-ratio: 1 / 1;
     color: var(--color-light);
     position: relative;
+    border-radius: var(--border-radius-cards);
+    overflow: hidden;
+    // background: linear-gradient(to top, #fff, #0a0a0a, #040404 20.5%, #000 50%);
     &_title {
         text-align: left;
         padding: 20px;
@@ -175,10 +177,25 @@ body {
         bottom: 0;
         right: 0;
         left: 0;
-        min-height: 100%;
-        min-width: 100%;
+        height: 100%;
+        width: 100%;
         z-index: 1;
         object-fit: cover;
+    }
+    &::after {
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(10, 10, 10, 0) 42%,
+            rgba(4, 4, 4, 0.2) 99.99%,
+            rgba(0, 0, 0, 0.5) 100%
+        );
+        content: "";
+        // display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
     }
 }
 
