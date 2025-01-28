@@ -4,14 +4,16 @@ import Cards from "../../components/cards/Cards";
 import { default as db } from "../../api/db.json";
 
 function Home() {
-    const title = "Chez vous, partout et ailleurs";
-    const imgUrl = "../../../src/assets/images/Hero_banner.png";
-    const imgAlt = "";
+    const imgUrl = "src/assets/images/Hero_banner.png";
     const database = db;
 
     return (
         <>
-            <Banner title={title} imgUrl={imgUrl} imgAlt={imgAlt} />
+            <Banner
+                title="Chez vous, partout et ailleurs"
+                imgUrl={imgUrl}
+                imgAlt=""
+            />
             <Cards database={database} />
         </>
     );
