@@ -243,6 +243,17 @@ body {
     opacity: 0;
     height: 0;
 }
+
+.carrousel {
+    overflow: hidden;
+    margin-bottom: 30px;
+    img {
+        max-height: 412px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
 .footer {
     background-color: black;
     color: var(--color-light);
