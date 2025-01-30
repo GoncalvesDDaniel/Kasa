@@ -8,7 +8,6 @@ function Dropdown(props) {
             <div
                 type="button"
                 className="dropdown relative "
-                // style={`${isOpen && { height: "100%" }}`}
                 aria-expanded={`${isOpen ? true : false}`}
                 onClick={() => {
                     setIsOpen(!isOpen);
@@ -19,9 +18,7 @@ function Dropdown(props) {
                     <img src="src/assets/images/Dropdown_arrow.svg" alt="" />
                 </div>
                 <div
-                    className={`dropdown-content ${
-                        isOpen ? "collapse-show" : "collapse"
-                    }`}
+                    className={`dropdown-content ${isOpen ? "" : "collapse"}`}
                     aria-hidden={`${isOpen ? "false" : "true"}`}
                 >
                     {props.children}

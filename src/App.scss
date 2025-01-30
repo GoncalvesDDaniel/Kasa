@@ -235,25 +235,13 @@ body {
         font-weight: var(--fw-light);
         text-align: start;
         padding: 15px 20px;
-        // transition: height, visibility 1s linear;
+        transition: height, 250ms ease-out;
     }
 }
 .collapse {
-    transition: height, visibility 1s linear;
-    visibility: collapse;
-    height: 0;
     padding: 0;
-}
-.collapse-show {
-    transition: height, visibility 1s linear;
-    visibility: visible;
-    height: auto;
-}
-@keyframes collapse {
-    from {
-    }
-    to {
-    }
+    opacity: 0;
+    height: 0;
 }
 .footer {
     background-color: black;
