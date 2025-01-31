@@ -89,6 +89,10 @@ a {
 }
 
 //General styles
+main {
+    // full screen minus header footer and padding root x2
+    min-height: calc(100vh - (186.4px + 68px + 100px));
+}
 body {
     font-family: var(--ff-primary);
     font-optical-sizing: auto;
@@ -253,7 +257,25 @@ body {
         object-fit: cover;
     }
 }
-
+.notFound {
+    font-size: clamp(var(--fs-big), 18em, 18rem);
+    font-weight: var(--fw-bold);
+    color: var(--color-primary);
+    padding: 89px;
+    &-subtitle {
+        font-size: 36px;
+        color: var(--color-primary);
+        margin-bottom: 139px;
+    }
+    &-link {
+        margin-bottom: 139px;
+        text-decoration: underline;
+    }
+}
+.product-header {
+    color: var(--color-primary);
+    font-size: var(--fs-title);
+}
 .footer {
     background-color: black;
     color: var(--color-light);
