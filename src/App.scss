@@ -2,10 +2,11 @@
 :root {
     --ff-primary: "Montserrat", serif;
 
-    --fs-light: 0.875em; //14px
-    --fs-primary: 1.125em; //18px
-    --fs-title: 1.5em; //24px
-    --fs-big: 3em; // 48px
+    --fs-light: 0.875rem; //14px
+    --fs-primary: 1.125rem; //18px
+    --fs-title: 1.5rem; //24px
+    --fs-title-big: 2.25rem; //36px
+    --fs-big: 3rem; // 48px
 
     --fw-light: 400;
     --fw-primary: 500;
@@ -272,9 +273,54 @@ body {
         text-decoration: underline;
     }
 }
-.product-header {
-    color: var(--color-primary);
-    font-size: var(--fs-title);
+// .product-header {
+// }
+.product-name {
+    &_title {
+        color: var(--color-primary);
+        font-size: var(--fs-title-big);
+        font-weight: var(--fw-primary);
+        text-align: start;
+    }
+    &_location {
+        font-size: var(--fs-primary);
+        text-align: start;
+    }
+}
+.product-host {
+    margin-bottom: 20px;
+    &_name {
+        color: var(--color-primary);
+        margin-right: 10px;
+    }
+    &_img {
+        border-radius: 50%;
+        max-height: 64px;
+    }
+}
+
+.product-visuals {
+    margin-bottom: 24px;
+
+    &_tags {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            gap: 10px;
+        }
+        li {
+            color: var(--color-light);
+            background-color: var(--color-primary);
+            font-size: var(--fs-light);
+            font-weight: var(--fw-bold);
+            padding: 3px 40px;
+            border-radius: 10px;
+        }
+    }
+    &_rating {
+        gap: 10px;
+    }
 }
 .footer {
     background-color: black;

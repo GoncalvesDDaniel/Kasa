@@ -1,7 +1,9 @@
 import { useLocation, useParams } from "react-router";
 import { default as db } from "../../api/db.json";
-import Carrousel from "../../components/carrousel/carrousel";
+import Carrousel from "../../components/product/Carrousel";
+import Tags from "../../components/product/Tags";
 import NotFound from "./NotFound";
+import Rating from "../../components/product/rating";
 
 function Products(props) {
     const location = useLocation();
@@ -19,7 +21,7 @@ function Products(props) {
         return <NotFound />;
     }
     console.log(product);
-    console.log(product.host);
+    console.log(product.rating);
     // TODO get host name correctly
     const { name: hostName, picture: hostPicture } = product.host;
     return (
@@ -38,6 +40,10 @@ function Products(props) {
                         className="product-host_img"
                     />
                 </div>
+            </div>
+            <div className="product-visuals flex justify-between">
+                <Tags id={product.id}>{product.tags}</Tags>
+                <Rating>{product.rating}</Rating>
             </div>
         </>
     );
