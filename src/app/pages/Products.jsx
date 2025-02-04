@@ -4,6 +4,7 @@ import Carrousel from "../../components/product/Carrousel";
 import Tags from "../../components/product/Tags";
 import NotFound from "./NotFound";
 import Rating from "../../components/product/rating";
+import Dropdown from "../../components/ui/Dropdown";
 
 function Products(props) {
     const location = useLocation();
@@ -22,7 +23,6 @@ function Products(props) {
     }
     console.log(product);
     console.log(product.rating);
-    // TODO get host name correctly
     const { name: hostName, picture: hostPicture } = product.host;
     return (
         <>
@@ -44,6 +44,14 @@ function Products(props) {
             <div className="product-visuals flex justify-between">
                 <Tags id={product.id}>{product.tags}</Tags>
                 <Rating>{product.rating}</Rating>
+            </div>
+            <div className="flex">
+                <Dropdown title="Description" id="product.id">
+                    {product.description}
+                </Dropdown>
+                <Dropdown title="Équipements" id="product.id">
+                    {product.equipments}
+                </Dropdown>
             </div>
         </>
     );

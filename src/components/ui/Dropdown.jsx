@@ -1,13 +1,26 @@
 import React, { useState } from "react";
+import Dropdown_arrow from "./../../assets/images/Dropdown_arrow.svg";
 
 function Dropdown(props) {
     const [isOpen, setIsOpen] = useState(false);
 
+    let content;
+    if (Array.isArray(props.children)) {
+        content = (
+            <ul>
+                {props.children.map((item, index) => {
+                    return <li key={`${props.id}-${index}`}>{item}</li>;
+                })}
+            </ul>
+        );
+    } else {
+        content = props.children;
+    }
     return (
         <>
             <div
                 type="button"
-                className="dropdown relative "
+                className="dropdown relative"
                 aria-expanded={`${isOpen ? true : false}`}
                 onClick={() => {
                     setIsOpen(!isOpen);
@@ -15,13 +28,13 @@ function Dropdown(props) {
             >
                 <div className="dropdown-bar flex justify-between">
                     <p className="dropdown-title">{props.title}</p>
-                    <img src="src/assets/images/Dropdown_arrow.svg" alt="" />
+                    <img src={Dropdown_arrow} alt="" />
                 </div>
                 <div
                     className={`dropdown-content ${isOpen ? "" : "collapse"}`}
                     aria-hidden={`${isOpen ? "false" : "true"}`}
                 >
-                    {props.children}
+                    {content}
                 </div>
             </div>
         </>
