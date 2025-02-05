@@ -45,7 +45,7 @@ function Products(props) {
                 <Tags id={product.id}>{product.tags}</Tags>
                 <Rating>{product.rating}</Rating>
             </div>
-            <div className="flex">
+            <div className="product-dropdown flex">
                 <Dropdown title="Description" id="product.id">
                     {product.description}
                 </Dropdown>

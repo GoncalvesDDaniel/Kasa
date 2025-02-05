@@ -92,7 +92,11 @@ a {
 //General styles
 main {
     // full screen minus header footer and padding root x2
-    min-height: calc(100vh - (186.4px + 68px + 100px));
+    // min-height: calc(100vh - (186.4px + 68px + 100px));
+    margin: 50px auto;
+    @media (max-width: 768px) {
+        margin: 27px auto;
+    }
 }
 body {
     font-family: var(--ff-primary);
@@ -111,11 +115,8 @@ body {
 }
 
 .header {
-    margin-bottom: var(--margin-bottom);
+    // margin-bottom: var(--margin-bottom);
 
-    @media (max-width: 768px) {
-        margin-bottom: 27px;
-    }
     &-logo {
         @media (max-width: 768px) {
             max-width: 145px;
@@ -157,7 +158,7 @@ body {
     border-radius: var(--border-radius-default);
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 50px 60px;
-    margin-bottom: var(--margin-bottom);
+    // margin-bottom: var(--margin-bottom);
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
     }
@@ -208,11 +209,12 @@ body {
 .about {
     width: 90%;
     gap: 30px;
-    margin-bottom: var(--margin-bottom);
+    // margin-bottom: var(--margin-bottom);
 }
 .dropdown {
-    border-radius: 5px;
-    overflow: hidden;
+    flex: 1;
+    // border-radius: 5px;
+    // overflow: hidden;
     line-height: 1.8;
     ul {
         padding: 0px;
@@ -223,9 +225,8 @@ body {
     &-bar {
         padding: 10px 15px;
         background-color: var(--color-primary);
-        border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 5px;
-        z-index: 1;
+        border-radius: 5px;
+        // z-index: 1;
     }
     &-title {
         color: #fff;
@@ -236,9 +237,11 @@ body {
         background-color: var(--color-dark-light);
         width: 100%;
         font-weight: var(--fw-light);
-        text-align: start;
+        text-align: justify;
         padding: 15px 20px;
         transition: height, 250ms ease-out;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
     }
 }
 .collapse {
@@ -319,6 +322,9 @@ body {
     &_rating {
         gap: 10px;
     }
+}
+.product-dropdown {
+    gap: 76px;
 }
 .footer {
     background-color: black;
