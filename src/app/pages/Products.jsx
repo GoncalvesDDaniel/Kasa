@@ -21,12 +21,12 @@ function Products(props) {
     if (!product) {
         return <NotFound />;
     }
-    console.log(product);
-    console.log(product.rating);
+    // console.log(product);
+    // console.log(product.rating);
     const { name: hostName, picture: hostPicture } = product.host;
     return (
         <>
-            <Carrousel cover={product.cover} />
+            <Carrousel pictures={product.pictures} id={props.id} />
             <div className="product-header flex justify-between">
                 <div className="product-name">
                     <h2 className="product-name_title">{product.title}</h2>
