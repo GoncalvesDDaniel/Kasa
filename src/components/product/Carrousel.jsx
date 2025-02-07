@@ -5,10 +5,10 @@ function Carrousel(props) {
     const pictures = props.pictures;
     const [carrouselIndex, setCarrouselIndex] = useState(0);
 
-    useEffect(() => {
-        document.querySelector(".carrousel-pic").src =
-            pictures.at(carrouselIndex);
-    }, [carrouselIndex]);
+    // useEffect(() => {
+    //     document.querySelector(".carrousel-pic").src =
+    //         pictures.at(carrouselIndex);
+    // }, [carrouselIndex]);
 
     function previousPic() {
         let bufferIndex = carrouselIndex - 1;
@@ -26,7 +26,6 @@ function Carrousel(props) {
             setCarrouselIndex(() => carrouselIndex + 1);
         }
     }
-
     return (
         <>
             <div className="carrousel relative">
@@ -37,7 +36,7 @@ function Carrousel(props) {
                     <img src={Carrousel_arrow} alt="Previous Photo" />
                 </button>
                 <img
-                    src={pictures.at(carrouselIndex)}
+                    src={pictures[carrouselIndex]}
                     className="carrousel-pic"
                 ></img>
                 <button

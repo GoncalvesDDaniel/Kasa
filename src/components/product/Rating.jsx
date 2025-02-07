@@ -1,6 +1,6 @@
 import React from "react";
 function Rating(props) {
-    let rating = [];
+    let ratings = [];
     function generateRating(str) {
         const numberOfStars = parseInt(str);
         const colorMain = "#FF6060";
@@ -21,16 +21,21 @@ function Rating(props) {
         }
         for (let i = 1; i < 6; i++) {
             if (i <= numberOfStars) {
-                rating.push(generateStar(colorMain, i));
+                ratings.push(generateStar(colorMain, i));
             } else {
-                rating.push(generateStar(colorOff, i));
+                ratings.push(generateStar(colorOff, i));
             }
         }
-        return rating.join("").toString();
+        return ratings;
     }
     generateRating(props.children);
 
-    return <div className="product-visuals_rating flex">{rating}</div>;
+    return (
+        <div className="product-visuals_rating flex">
+            {ratings.map((rating) => rating)}
+            {/* {ratings} */}
+        </div>
+    );
 }
 
 export default Rating;
