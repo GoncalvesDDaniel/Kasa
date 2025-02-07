@@ -28,10 +28,16 @@ function Dropdown(props) {
             >
                 <div className="dropdown-bar flex justify-between">
                     <p className="dropdown-title">{props.title}</p>
-                    <img src={Dropdown_arrow} alt="" />
+                    <img
+                        src={Dropdown_arrow}
+                        alt=""
+                        className={`${isOpen ? "rotate" : "no-rotate"}`}
+                    />
                 </div>
                 <div
-                    className={`dropdown-content ${isOpen ? "" : "collapse"}`}
+                    className={`dropdown-content ${
+                        isOpen ? "collapse" : "no-collapse"
+                    }`}
                     aria-hidden={`${isOpen ? "false" : "true"}`}
                 >
                     {content}

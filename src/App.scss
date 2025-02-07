@@ -227,7 +227,14 @@ body {
         padding: 10px 15px;
         background-color: var(--color-primary);
         border-radius: 5px;
-        // z-index: 1;
+        .no-rotate {
+            rotate: 0deg;
+            transition: rotate, 250ms ease-out;
+        }
+        .rotate {
+            rotate: 180deg;
+            transition: rotate, 250ms ease-out;
+        }
     }
     &-title {
         color: #fff;
@@ -239,24 +246,30 @@ body {
         width: 100%;
         font-weight: var(--fw-light);
         text-align: justify;
-        padding: 15px 20px;
-        transition: height, 250ms ease-out;
         border-bottom-right-radius: 5px;
         border-bottom-left-radius: 5px;
+        // padding: 15px 20px;
     }
 }
 .collapse {
-    padding: 0;
-    opacity: 0;
+    padding: 15px 20px;
+    // visibility: visible;
+    content-visibility: visible;
+    // opacity: 1;
+    transition: height, 250ms ease-out;
+    // transition: all, 250ms ease-out;
+    // transition: visibility, 0ms ease-in;
+}
+.no-collapse {
+    // opacity: 0;
+    content-visibility: hidden;
     height: 0;
+    // transition: visibility, 0ms ease-in;
+    // transition: all, 250ms ease-out;
+    transition: height, 250ms ease-out;
 }
 
 // Not Found Page
-p {
-    margin: 0;
-    padding: 0;
-    margin-block-start: 0;
-}
 .notFound {
     font-size: clamp(var(--fs-big), 18em, 18rem);
     font-weight: var(--fw-bold);
