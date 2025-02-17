@@ -28,22 +28,26 @@ function Products(props) {
         <>
             <Carrousel pictures={product.pictures} id={props.id} />
             <div className="product-header flex justify-between">
-                <div className="product-name">
-                    <h2 className="product-name_title">{product.title}</h2>
-                    <p className="product-name_location">{product.location}</p>
+                <div className="product-info">
+                    <h2 className="product-info_title">{product.title}</h2>
+                    <p className="product-info_location">{product.location}</p>
+                    <div className="product-visuals ">
+                        <Tags id={product.id}>{product.tags}</Tags>
+                    </div>
                 </div>
-                <div className="product-host flex items-center ">
-                    <p className="product-host_name"> {hostName}</p>
-                    <img
-                        src={hostPicture}
-                        alt=""
-                        className="product-host_img"
-                    />
+                <div className="product-host flex flex-col justify-between">
+                    <div className="product-host_info flex items-center ">
+                        <p className="product-host_name"> {hostName}</p>
+                        <img
+                            src={hostPicture}
+                            alt=""
+                            className="product-host_img"
+                        />
+                    </div>
+                    <div className="product-visuals ">
+                        <Rating>{product.rating}</Rating>
+                    </div>
                 </div>
-            </div>
-            <div className="product-visuals flex justify-between">
-                <Tags id={product.id}>{product.tags}</Tags>
-                <Rating>{product.rating}</Rating>
             </div>
             <div className="product-dropdown flex">
                 <Dropdown title="Description" id="product.id">

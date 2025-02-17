@@ -9,7 +9,7 @@ function Footer() {
                 src={White_logo}
                 alt="Logo de Kasa"
             ></img>
-            <p>© 2020 Kasa. All rights reserved</p>
+            <p className="footer-credits">© 2020 Kasa. All rights reserved</p>
         </footer>
     );
 }
