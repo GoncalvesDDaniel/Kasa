@@ -115,6 +115,8 @@ body {
 #root {
     max-width: var(--wrapper-width);
     padding: var(--wrapper-padding);
+    margin: 0 auto;
+    text-align: center;
     @media (max-width: 769px) {
         padding: var(--wrapper-xs-padding);
     }
@@ -173,20 +175,15 @@ body {
     border-radius: var(--border-radius-default);
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 50px 60px;
-    // margin-bottom: var(--margin-bottom);
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
         padding: 0;
         background-color: #fff;
         gap: 20px;
     }
-    // @media (max-width: 1024px) {
-    //     gap: 20px;
-    // }
 }
 
 .cards-item {
-    // background-color: #ff6060;
     aspect-ratio: 1 / 1;
     color: var(--color-light);
     position: relative;
@@ -238,12 +235,9 @@ body {
     @media (max-width: 768px) {
         gap: 20px;
     }
-    // margin-bottom: var(--margin-bottom);
 }
 .dropdown {
     flex: 1;
-    // border-radius: 5px;
-    // overflow: hidden;
     line-height: 1.8;
     ul {
         padding: 0px;
@@ -287,24 +281,16 @@ body {
         text-align: justify;
         border-bottom-right-radius: 5px;
         border-bottom-left-radius: 5px;
-        // padding: 15px 20px;
     }
 }
 .collapse {
     padding: 15px 20px;
-    // visibility: visible;
     content-visibility: visible;
-    // opacity: 1;
     transition: height, 250ms ease-out;
-    // transition: all, 250ms ease-out;
-    // transition: visibility, 0ms ease-in;
 }
 .no-collapse {
-    // opacity: 0;
     content-visibility: hidden;
     height: 0;
-    // transition: visibility, 0ms ease-in;
-    // transition: all, 250ms ease-out;
     transition: height, 250ms ease-out;
 }
 
@@ -423,13 +409,11 @@ body {
     }
 }
 .product-host {
-    // margin-bottom: 20px;
     @media (max-width: 768px) {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         margin-top: 16px;
-        // margin-bottom: 13px;
     }
     &_name {
         color: var(--color-primary);
@@ -445,6 +429,7 @@ body {
         }
     }
     &_info {
+        justify-content: flex-end;
         @media (max-width: 768px) {
             order: 2;
         }
@@ -455,7 +440,6 @@ body {
     margin-top: 20px;
     @media (max-width: 768px) {
         margin-top: 0px;
-        // margin-top: 10px;
     }
 
     &_tags {

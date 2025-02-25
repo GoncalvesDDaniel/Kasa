@@ -33,7 +33,6 @@ function Rating(props) {
     return (
         <div className="product-visuals_rating flex">
             {ratings.map((rating) => rating)}
-            {/* {ratings} */}
         </div>
     );
 }

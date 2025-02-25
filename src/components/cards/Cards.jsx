@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Navigate } from "react-router";
+import React from "react";
 import { useNavigate } from "react-router";
 
 function Cards(props) {
@@ -20,12 +19,7 @@ function Cards(props) {
                         }
                     >
                         <img src={item.cover} alt="" />
-                        <h2
-                            className="cards-item_title "
-                            // key={`${item.id}-title`}
-                        >
-                            {item.title}
-                        </h2>
+                        <h2 className="cards-item_title ">{item.title}</h2>
                     </article>
                 ))}
             </div>

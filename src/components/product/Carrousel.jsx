@@ -1,14 +1,9 @@
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 import Carrousel_arrow from "../../assets/images/Carrousel_arrow.svg";
 
 function Carrousel(props) {
     const pictures = props.pictures;
     const [carrouselIndex, setCarrouselIndex] = useState(0);
-
-    // useEffect(() => {
-    //     document.querySelector(".carrousel-pic").src =
-    //         pictures.at(carrouselIndex);
-    // }, [carrouselIndex]);
 
     function previousPic() {
         let bufferIndex = carrouselIndex - 1;
