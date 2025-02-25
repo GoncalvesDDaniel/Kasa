@@ -9,7 +9,7 @@ function NotFound() {
                 Oups! La page que vous demandez n'existe pas.
             </p>
             <NavLink to="/" className="notFound-link">
-                Retourner sur la page d'acceuil
+                Retourner sur la page d'accueil
             </NavLink>
         </>
     );

@@ -25,7 +25,9 @@ function Carrousel(props) {
         <>
             <div className="carrousel relative">
                 <button
-                    className="carrousel-btn carrousel-btn_previous absolute"
+                    className={`carrousel-btn carrousel-btn_previous absolute ${
+                        pictures.length < 2 ? "none" : ""
+                    }`}
                     onClick={previousPic}
                 >
                     <img src={Carrousel_arrow} alt="Previous Photo" />
@@ -34,8 +36,13 @@ function Carrousel(props) {
                     src={pictures[carrouselIndex]}
                     className="carrousel-pic"
                 ></img>
+                <p className="carrousel-count absolute">
+                    {`${carrouselIndex + 1}/${pictures.length}`}
+                </p>
                 <button
-                    className="carrousel-btn carrousel-btn_next absolute"
+                    className={`carrousel-btn carrousel-btn_next absolute ${
+                        pictures.length < 2 ? "none" : ""
+                    }`}
                     onClick={nextPic}
                 >
                     <img src={Carrousel_arrow} alt="Previous Photo" />
